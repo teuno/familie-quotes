@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>familie quotes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
-<p class="quote"></p>
+
+<div class="card">
+    <div class="card-content">
+        <div class="content">
+            <p class="quote"></p>
+        </div>
+    </div>
+</div>
 
 <script>
     const quotes = [
         "'T is veul als 't niet op kan en weinig als 't niet e deilt kan worde.",
-        "De kat zal noe wel nie meer met je leuge moag goan sleupen."
+        "De kat zal noe wel nie meer met je leuge moag goan sleupen.",
+        "Och jong ut gaot toch altied anders dan je denke",
+        "Je bin veul langer oud as jong",
+        "As je noe nie ophouwe sloa ik d'r  mit ut mes deurheen.",
+        "in gaot de a en o omwisselen: goat",
+        "Ut nuttige mit ut aangename verwisselen."
     ]
 
     const get_quote = () => quotes[~~(Math.random() * quotes.length)]
