@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>familie quotes</title>
+</head>
+<body>
+<p class="quote"></p>
+
+<script>
+    const quotes = [
+        "'T is veul als 't niet op kan en weinig als 't niet e deilt kan worde.",
+        "De kat zal noe wel nie meer met je leuge moag goan sleupen."
+    ]
+
+    const get_quote = () => quotes[~~(Math.random() * quotes.length)]
+
+    const quote_element = document.querySelector(".quote")
+    quote_element.innerHTML = get_quote()
+</script>
+</body>
+</html>
