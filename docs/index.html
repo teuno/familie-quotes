@@ -22,6 +22,25 @@
     <div class="column"></div>
 </div>
 
+<div class="columns">
+    <div class="column"></div>
+    <div class="column is-three-quarters">
+        <table class="table is-size-1">
+            <thead>
+            <tr>
+                <th>Nummer</th>
+                <th>Uitspraak</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tbody class="quotes-list">
+            <tr>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="column"></div>
+</div>
 
 <script>
     const quotes = [
@@ -188,9 +207,16 @@
     ]
 
     const get_quote = () => quotes[~~(Math.random() * quotes.length)]
+    const show_quotes = (quote_list_element) => {
+        quotes.map((element, index) => quote_list_element.innerHTML += `<tr><td>${index+1}</td><td>${element}</td></tr>`)
+    }
+
 
     const quote_element = document.querySelector(".quote")
     quote_element.innerHTML = get_quote()
+
+    const quote_list_element = document.querySelector(".quotes-list")
+    show_quotes(quote_list_element)
 </script>
 </body>
 </html>
